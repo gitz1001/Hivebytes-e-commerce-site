@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hivebytes Dashboard</title>
+    <link rel="stylesheet" href="Hivebytes.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- Logo on the left side -->
+        <img src="HB logo.png" alt="Hivebytes Logo" class="logo">
+        <!-- Main Content -->
+        <main>
+            <h1>Welcome to Hivebytes</h1>
+            <p>Discover. Learn. Create–Unlock your World of Digital Treasures!</p>
+        </main>
+        <!-- Navigation Bar -->      
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="Hivebytes.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="HB login.html">Sign out</a></li>
+                    <li><a href="cart.html"> <img src="Cart.png" alt="Shoping Cart Icon" class="cart-icon"></a></li>
+                </ul>
+            </nav>
+    </header>
+
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <img src="background.png" alt="Hero Banner" class="hero-image">
+            <div class="hero-content">
+                <h2>Unlock Your Creativity with Digital Treasures</h2>
+                <button class="cta-button" onclick="window.location.href='products.html'">Shop Now</button>
+            </div>
+        </section>
+            
+        <section class="categories">
+            <h2 class="categories-title">Explore Categories</h2>
+            <div class="products-grid">
+                <div class="category-item">
+                    <img src="ebooks.png" alt="E-books">
+                    <h4>E-BOOKS</h4>
+                    <button class="view-more-button" onclick="window.location.href='products.html?category=ebooks'">View More</button>
+                </div>
+                <div class="category-item">
+                    <img src="templates.png" alt="Templates">
+                    <h4>TEMPLATES</h4>
+                    <button class="view-more-button" onclick="window.location.href='products.html?category=templates'">View More</button>
+                </div>
+                <div class="category-item">
+                    <img src="images.png" alt="Stock Photos">
+                    <h4>STOCK PHOTOS</h4>
+                    <button class="view-more-button" onclick="window.location.href='products.html?category=images'">View More </button>
+                </div>
+                <!-- Add more categories as needed -->
+            </div>
+        </section>   
+
+        <!-- About Us Section with Image Carousel -->
+        <section class="about-us-container">
+            <div class="carousel-container">
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-img-container">
+                        <img src="about us.png" alt="Creative Work" class="carousel-img">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="shop.png" alt="Digital Products" class="carousel-img">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="image3.jpg" alt="Innovative Resources" class="carousel-img">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="background.png" alt="Innovative Resources" class="carousel-img">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="mobile.png" alt="Innovative Resources" class="carousel-img">
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <span class="prev">&#10094;</span>
+                    <span class="next">&#10095;</span>
+                </div>
+                <!-- Carousel Dots -->
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="about-us-content">
+                <h2>About Us</h2>
+                <p>At Hivebytes, we believe in the power of creativity and the boundless potential of digital resources. Our platform offers a wide array of digital treasures—ranging from e-books and templates to stock photos—carefully curated to inspire, educate, and equip creators with the tools they need to succeed. Whether you're designing, writing, or building something new, we are here to fuel your journey.</p>
+                <p>Our commitment to quality means we source only the best digital products, ensuring that every item on Hivebytes meets the highest standards of innovation and usability. We exist to help you explore, create, and thrive in the digital world, making the process seamless and enjoyable. With Hivebytes, the possibilities are endless, and your creativity is the only limit.</p>
+            </div>
+        </section>
+
+        <!-- Mission and Vision Section -->
+        <section class="mission-vision">
+            <h2></h2>
+            <div class="mv-container">
+                <div class="mission">
+                    <h3>Mission</h3>
+                    <p>At Hivebytes, our mission is to empower creators by providing a diverse collection of digital products that spark creativity, drive innovation, and fuel learning. We strive to make high-quality resources accessible to everyone, enabling users to unlock their full potential and turn ideas into reality.</p>
+                </div>
+                <div class="vision">
+                    <h3>Vision</h3>
+                    <p>Our vision is to become the leading platform for digital innovation, where creators from all walks of life can easily access, share, and utilize digital treasures to shape a brighter, more creative future. We aspire to build a vibrant community that fosters growth, collaboration, and boundless imagination.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+    <section id="contact" class="contact-us-container">
+        <div class="contact-us-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+                <div id="responseMessage" class="hidden"></div>
+            </form>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="contact-socials">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <div class="social-icon-container">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="facebook.png" alt="Facebook Icon" class="social-icon">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <div class="social-icon-container">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="instagram.png" alt="Instagram Icon" class="social-icon">
+                        <span>Instagram</span>
+                    </a>
+                </div>
+                <div class="social-icon-container">
+                    <a href="https://www.tiktok.com" target="_blank">
+                        <img src="tiktok.png" alt="TikTok Icon" class="social-icon">
+                        <span>TikTok</span>
+                    </a>
+                </div>
+                <div class="social-icon-container">
+                    <a href="https://www.threads.net" target="_blank">
+                        <img src="threads.png" alt="Threads Icon" class="social-icon">
+                        <span>Threads</span>
+                    </a>
+                </div>
+                <div class="social-icon-container">
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="twitter.png" alt="X/Twitter Icon" class="social-icon">
+                        <span>X (Twitter)</span>
+                    </a>
+                </div>                
+            </div>
+        </div>
+
+        <!-- Contact Details Below Social Media Icons -->
+        <div class="contact-details">
+            <h4>We'd love to hear from you!</h4>
+            <p>Whether you have questions about our products, need support, or want to share feedback, we're here to help. Reach out to us through any of the following:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@hivebytes.com">support@hivebytes.com</a></li>
+                <li>Phone: <a href="Phone No. +639465542103">+639465541203</a></li>
+                <li>Address: 143 Digital Lane, Creatorsville, Philippines 45678</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Hivebytes. All Rights Reserved.</p>
+    </footer>
+
+    <script src="Hivebytes.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now - Payment</title>
+    <link rel="stylesheet" href="buynow.css">
+</head>
+<body>
+    <header>
+        <!-- Logo on the left side -->
+        <img src="HB logo.png" alt="Hivebytes Logo" class="logo">
+        <!-- Main Content -->
+        <main>
+            <h1>Welcome to Hivebytes</h1>
+            <p>Discover. Learn. Create – Unlock your World of Digital Treasures!</p>
+        </main>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Hivebytes.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="HB login.html">Sign out</a></li>
+                <li><a href="cart.html"><img src="Cart.png" alt="Shopping Cart Icon" class="cart-icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="payment-form">
+        <h2>Selected Product</h2>
+        <p id="selected-product"></p> 
+
+        <h2>Customer Information</h2>
+        <form id="buy-now-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <h2>Payment Options</h2>
+
+            <!-- Bank Transfer Radio Button -->
+            <label for="bank-transfer">
+                <input type="radio" id="bank-transfer" name="payment" value="bank-transfer" required>
+                Bank Transfer
+            </label>
+            <!-- Bank Number Label -->
+            <p>Bank Number: 4619266787</p>
+
+            <!-- Bank Transfer QR Image -->
+            <img src="bpi-qr.png" alt="Bank Transfer QR Code" class="payment-qr">
+            <br
+            <!-- GCash Radio Button -->
+            <label for="gcash">
+                <input type="radio" id="gcash" name="payment" value="gcash" required>
+                GCash
+            </label>
+            <!-- GCash Number Label -->
+            <p>GCash Number: 09465541203</p>
+
+            <!-- GCash QR Image -->
+            <img src="gcash-qr.png" alt="GCash QR Code" class="payment-qr">
+
+            <div class="confirm-check">
+                <input type="checkbox" id="confirm-payment" name="confirm-payment" required>
+                <label for="confirm-payment">I confirm that I will send the payment to the selected Payment options so I will receive the download link upon confirmation.</label>
+            </div>
+
+            <button type="submit">Confirm and Buy</button>
+        </form>
+    </section>
+
+    <!-- Dynamic Thank-You Message -->
+    <div class="thank-you-message" id="thank-you-message" style="display: none;">
+        <div class="thank-you-content">
+            <h2>Thank You for Your Purchase!</h2>
+            <p>You will receive an email with the download link shortly.</p>
+            <div class="btn-group">
+                <button onclick="goHome()">Return to Home</button>
+                <button onclick="goProducts()">Go to Products</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thank you for shopping at Hivebytes!</p>
+    </footer>
+
+    <script src="theme-switch.js"></script>
+    <script src="buynow.js"></script>
+    <script>
+        // Extract product details from the URL query parameters
+        function getProductDetailsFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const product = urlParams.get('product');
+            const price = urlParams.get('price');
+            return { product, price };
+        }
+
+        // Display selected product information
+        function displaySelectedProduct() {
+            const { product, price } = getProductDetailsFromURL();
+            const productDisplay = document.getElementById('selected-product');
+            if (product && price) {
+                productDisplay.innerHTML = `You are purchasing: <strong>${product}</strong> for <strong>₱${parseFloat(price).toFixed(2)}</strong>`;
+            } else {
+                productDisplay.innerHTML = 'No product selected.';
+            }
+        }
+
+        // Show the thank you message upon form submission
+        document.getElementById('buy-now-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+
+            if (form.checkValidity()) {
+                // Hide the form and show the thank you message
+                form.style.display = 'none';
+                document.getElementById('thank-you-message').style.display = 'block';
+            }
+        });
+
+        // Redirect buttons
+        function goHome() {
+            window.location.href = 'Hivebytes.html';
+        }
+
+        function goProducts() {
+            window.location.href = 'products.html';
+        }
+
+        // Load the product details on page load
+        window.onload = displaySelectedProduct;
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hivebytes Products</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header>
+        <img src="HB logo.png" alt="Hivebytes Logo" class="logo">
+        <main>
+            <h1>Welcome to Hivebytes</h1>
+            <p>Discover. Learn. Create–Unlock your World of Digital Treasures!</p>
+        </main>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="Hivebytes.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="HB login.html">Sign out</a></li>
+                    <li><a href="cart.html"><img src="Cart.png" alt="Cart" class="cart-icon"></a></li>
+                </ul>
+            <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for products...">
+            <button type="button" onclick="searchProducts()">Search</button>
+            </div>
+            </nav>
+    </header>
+
+    <section class="category-filters">
+        <button class="chevron-arrow-btn" onclick="filterProducts('ebooks', event)">E-Books</button>
+        <button class="chevron-arrow-btn" onclick="filterProducts('templates', event)">Templates</button>
+        <button class="chevron-arrow-btn" onclick="filterProducts('images', event)">Stock Photos</button>
+    </section>    
+    
+
+    <section class="products-section">
+        <div class="products-grid ebooks">
+
+            <div class="product-item">
+                <img src="image2.jpg" alt="E-book 1">
+                <h4>Digital Marketing Guide</h4>
+                <p>₱499.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image1.jpg" alt="E-book 2">
+                <h4>Web Development Masterclass</h4>
+                <p>₱599.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image3.jpg" alt="E-book 3">
+                <h4>Web Development </h4>
+                <p>₱599.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+             <div class="product-item">
+                <img src="image2.jpg" alt="E-book 1">
+                <h4>Digital Marketing Guide</h4>
+                <p>₱499.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image1.jpg" alt="E-book 2">
+                <h4>Web Development Masterclass</h4>
+                <p>₱599.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image3.jpg" alt="E-book 3">
+                <h4>Web Development </h4>
+                <p>₱599.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <!-- More E-books can be added here -->
+        </div>
+
+        <div class="products-grid templates">
+
+            <div class="product-item">
+                <img src="image1.jpg" alt="Template 1">
+                <h4>Resume Template</h4>
+                <p>₱299.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image3.jpg" alt="Template 2">
+                <h4>Invoice Template</h4>
+                <p>₱199.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image2.jpg" alt="Template 2">
+                <h4>Invoice Template</h4>
+                <p>₱199.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image2.jpg" alt="Template 2">
+                <h4>Invoice Template</h4>
+                <p>₱199.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image2.jpg" alt="Template 2">
+                <h4>Invoice Template</h4>
+                <p>₱199.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <!-- More Templates can be added here -->
+        </div>
+
+        <div class="products-grid images">
+
+            <div class="product-item">
+                <img src="image1.jpg" alt="Stock Photo 1">
+                <h4>Sunset Landscape</h4>
+                <p>₱100.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <div class="product-item">
+                <img src="image2.jpg" alt="Stock Photo 2">
+                <h4>Cityscape at Night</h4>
+                <p>₱150.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now" onclick="window.location.href='buynow.html'">Buy Now</button>
+                <button class="reviews" onclick="window.location.href='reviews.html'">Review</button>
+
+            </div>
+            <!-- More Stock Photos can be added here -->
+        </div>
+    </section>
+
+    <section class="no-results" style="display: none;">
+        <img src="No result.png" alt="No Results" class="no-results-gif">
+        <p>We couldn't find any results. Browse for something else!</p>
+    </section>   
+    
+    <footer>
+        <p>&copy; 2024 Hivebytes. All Rights Reserved.</p>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>
